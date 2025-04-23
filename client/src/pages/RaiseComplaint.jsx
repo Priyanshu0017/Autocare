@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Backbutton from "../components/Backbutton";
+import BackButton from "../components/BackButton";
 import { useDispatch, useSelector } from "react-redux";
 import { raiseComplaint } from "../features/complaint/complaintSlice";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const RaiseComplaint = () => {
 
   return (
     <div className="min-h-screen p-10">
-      <Backbutton url={"/"}/>
+      <BackButton url={"/"}/>
       <h1 className="text-center font-bold text-xl"> Raise New Complaint</h1>
 
       <div className=" p-5 border my-5">

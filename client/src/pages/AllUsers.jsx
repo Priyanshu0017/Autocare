@@ -4,7 +4,7 @@ import { getUsers } from "../features/admin/adminSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Loading from "../components/Loading";
-import Backbutton from "../components/Backbutton";
+import BackButton from "../components/BackButton";
 
 const AllUsers = () => {
   const { user } = useSelector((state) => state.auth);
@@ -41,7 +41,7 @@ const AllUsers = () => {
 
   return (
     <div className="min-h-screen p-10">
-      <Backbutton url={"/"}/>
+      <BackButton url={"/"}/>
       <h1 className="text-xl text-center font-bold my-10">All Users</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

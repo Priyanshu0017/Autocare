@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Backbutton = ({ url }) => {
+const BackButton = ({ url }) => {
   return (
     <Link
       to={url}
@@ -12,4 +12,4 @@ const Backbutton = ({ url }) => {
   );
 };
 
-export default Backbutton;
+export default BackButton;

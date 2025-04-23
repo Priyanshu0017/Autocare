@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ComplaintCard from "../components/ComplaintCard";
-import Backbutton from "../components/Backbutton";
+import BackButton from "../components/BackButton";
 import { useDispatch, useSelector } from "react-redux";
 import { getComplaints } from "../features/complaint/complaintSlice";
 import { toast } from "react-toastify";
@@ -45,7 +45,7 @@ const AllComplaints = () => {
 
   return (
     <div className="min-h-screen p-10 ">
-      <Backbutton url={"/"} />
+      <BackButton url={"/"} />
       <h1 className="text-center text-xl my-4 font-bold">All Complaints</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         { user?.isAdmin ? allcomplaints.map((complaint) => {

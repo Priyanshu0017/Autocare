@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Backbutton from "../components/Backbutton";
+import BackButton from "../components/BackButton";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -57,7 +57,7 @@ const SingleComplaint = () => {
 
   return (
     <div className="min-h-screen p-10">
-      <Backbutton url={"/complaints"} />
+      <BackButton url={"/complaints"} />
       <h1 className="text-center text-xl font-bold">Complaint Details</h1>
       <div className="relative p-5 border border-gray-400 my-5 flex items-center justify-between flex-col md:flex-row">
         <div
