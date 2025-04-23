@@ -1,5 +1,4 @@
 import axios from "axios";
-import { ApiUrl } from "../../config";
 
 const fetchComplaints = async (token) => {
   const options = {
@@ -8,7 +7,7 @@ const fetchComplaints = async (token) => {
     },
   };
 
-  const response = await axios.get(`${ApiUrl}/api/complaint`, options);
+  const response = await axios.get("/api/complaint", options);
   return response.data
 };
 
@@ -18,7 +17,7 @@ const fetchComplaint = async (id,token) => {
       authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get(`${ApiUrl}/api/complaint/${id}`, options);
+  const response = await axios.get(`/api/complaint/${id}`, options);
   return response.data
 };
 
@@ -28,7 +27,7 @@ const addComplaint = async (formData , token)=> {
       authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.post(`${ApiUrl}/api/complaint`,formData, options);
+  const response = await axios.post(`/api/complaint`,formData, options);
   return response.data
 }
 
@@ -38,7 +37,7 @@ const update = async(formdata ,token)=> {
       authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.put(`${ApiUrl}/api/complaint/${formdata.id}`,formdata
+  const response = await axios.put(`/api/complaint/${formdata.id}`,formdata
     , options);
   return response.data
 }
