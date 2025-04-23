@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api':{
-        target : 'http://localhost:6000',
+        target : 'https://lapcare01.onrender.com/',
         changeOrigin: true,
         secure:false
       }
