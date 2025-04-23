@@ -1,0 +1,30 @@
+<!-- Background Colors
+Dark Background: bg-gray-900 (for main backgrounds)
+or
+Dark Background: bg-gradient-to-r from-slate-700 to-zinc-800 (for main backgrounds)
+
+Card Background: bg-gray-800 (for cards and containers)
+or
+Card Background: bg-gradient-to-r from-slate-600 to-zinc-700 (for cards and containers)
+
+Navbar Background: bg-gray-700 (for the navbar)
+or
+Navbar Background: bg-gradient-to-r from-slate-500 to-zinc-600 (for the navbar)
+
+Text Colors
+Primary Text: text-white (for main text)
+Secondary Text: text-gray-300 (for subtext and less important information)
+Placeholder Text: placeholder-gray-500 (for input placeholders)
+
+Button Colors
+Primary Button Background: bg-blue-600 (for primary actions)
+Primary Button Hover: hover:bg-blue-500 (for hover effect)
+Secondary Button Background: bg-yellow-500 (for secondary actions)
+Secondary Button Hover: hover:bg-yellow-400 (for hover effect)
+Danger/Error Background: bg-red-600 (for error messages)
+Danger/Error Hover: hover:bg-red-500 (for hover effect)
+
+Border Colors
+
+Input Border: border-gray-600 (for input fields)
+Card Border: border-gray-700 (for card borders) -->
