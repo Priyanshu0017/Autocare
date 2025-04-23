@@ -9,6 +9,8 @@ const cors = require("cors");
 // DB CONNECTION
 connectDB();
 
+app.use(cors({origin : "*"}));
+
 // Body-Parser
 app.use(express.json());
 
@@ -27,7 +29,6 @@ app.get("/", (req, res) => {
 app.use("/api/user", require("./routes/authRoutes"));
 //Complaint Routes
 app.use("/api/complaint", require("./routes/complaintRoutes"));
-app.use(cors({ allwOrigin: "*" }));
 
 // Admin routes
 app.use("/api/admin", require("./routes/adminRoutes"));
