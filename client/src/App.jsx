@@ -12,7 +12,6 @@ import RaiseComplaint from "./pages/RaiseComplaint";
 import PrivateComponent from "./components/PrivateComponent";
 import { ToastContainer } from "react-toastify";
 import AllUsers from "./pages/AllUsers";
-import AllComments from "./pages/AllComments";
 
 const App = () => {
   return (
@@ -23,7 +22,6 @@ const App = () => {
           <Route path="" element={<Home />}></Route>
           <Route path="admin" element={<AdminDashboard />}></Route>
           <Route path="admin/users" element={<AllUsers />}></Route>
-          <Route path="admin/comments" element={<AllComments />}></Route>
           <Route path="complaints" element={<AllComplaints />}></Route>
           <Route path="complaints/:id" element={<SingleComplaint />}></Route>
           <Route path="raise-complaint" element={<RaiseComplaint />}></Route>
