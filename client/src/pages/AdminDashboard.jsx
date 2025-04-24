@@ -20,12 +20,6 @@ const AdminDashboard = () => {
         >
           All Complaints
         </Link>
-        <Link
-          to={"/admin/comments"}
-          className="bg-black text-center text-white font-semibold px-8 py-2 w-full md:w-1/2 my-2 hover:cursor-pointer hover:bg-white hover:text-black duration-200 border "
-        >
-          All Comments
-        </Link>
       </div>
     </div>
   )

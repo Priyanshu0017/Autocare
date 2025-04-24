@@ -6,7 +6,7 @@ const adminSlice = createSlice({
     allusers: [],
     allcomplaints: [],
     allcomments: [],
-    isLoading: false,
+    isLoading2: false,
     isError: false,
     isSuccess: false,
     message: "",
@@ -15,35 +15,35 @@ const adminSlice = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(getUsers.pending, (state, action) => {
-      state.isLoading = true;
+      state.isLoading2 = true;
       state.isError = false;
       state.isSuccess = false;
     });
     builder.addCase(getUsers.rejected, (state, action) => {
-      state.isLoading = false;
+      state.isLoading2 = false;
       state.isError = true;
       state.isSuccess = false;
       state.message = action.payload;
     });
     builder.addCase(getUsers.fulfilled, (state, action) => {
-      state.isLoading = false;
+      state.isLoading2 = false;
       state.isError = false;
       state.isSuccess = true;
       state.allusers = action.payload;
     });
     builder.addCase(getAllComplaints.pending, (state, action) => {
-      state.isLoading = true;
+      state.isLoading2 = true;
       state.isError = false;
       state.isSuccess = false;
     });
     builder.addCase(getAllComplaints.rejected, (state, action) => {
-      state.isLoading = false;
+      state.isLoading2 = false;
       state.isError = true;
       state.isSuccess = false;
       state.message = action.payload;
     });
     builder.addCase(getAllComplaints.fulfilled, (state, action) => {
-      state.isLoading = false;
+      state.isLoading2 = false;
       state.isError = false;
       state.isSuccess = true;
       state.allcomplaints = action.payload;

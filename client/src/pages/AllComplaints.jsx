@@ -13,7 +13,7 @@ const AllComplaints = () => {
   const { complaints, isLoading, isError, message } = useSelector(
     (state) => state.complaint
   );
-  const { allcomplaints } = useSelector((state) => state.admin);
+  const { allcomplaints , isLoading2 } = useSelector((state) => state.admin);
 
   useEffect(() => {
    
@@ -40,6 +40,9 @@ const AllComplaints = () => {
   }, [isError, message ,user]);
 
   if (isLoading) {
+    <Loading />;
+  }
+  if (isLoading2) {
     <Loading />;
   }
 
