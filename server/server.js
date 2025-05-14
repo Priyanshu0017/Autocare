@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
   res.json({
-    msg: "LAPCARE API RUNNING...",
+    msg: "AUTOCARE API RUNNING...",
   });
 });
 
