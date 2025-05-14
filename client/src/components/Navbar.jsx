@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center md:px-8 p-6 py-2 border border-b-1 border-black shadow-sm">
       <Link to={"/"} className="text-2xl font-bold uppercase">
-        Lapcare
+        Autocare
       </Link>
       <div className="space-x-4 flex items-center">
         {user ? (

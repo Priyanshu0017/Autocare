@@ -73,7 +73,7 @@ const SingleComplaint = () => {
         </div>
         <div className="my-10 w-full md:w-1/2 text-center md:text-left ">
           <h1 className="text-2xl font-bold my-2 uppercase ">
-            Brand : {singleComplaint.laptop}
+            Brand : {singleComplaint?.car}
           </h1>
           <p className="text-sm font-semibold text-gray-600 my-2">
             {" "}

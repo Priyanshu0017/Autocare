@@ -22,14 +22,13 @@ const getComplaints = asyncHandler(async (req, res) => {
 });
 
 const raiseComplaint = asyncHandler(async (req, res) => {
-
   // Logic to create a new complaint
 
-  const { laptop ,description , image} = req.body
+  const { car, description, image } = req.body;
 
-  if(!laptop || !description || !image){
+  if (!car || !description || !image) {
     res.status(400);
-    throw new Error('Please Fill All Details')
+    throw new Error("Please Fill All Details");
   }
 
   const user = await User.findById(req.user._id);
@@ -42,24 +41,22 @@ const raiseComplaint = asyncHandler(async (req, res) => {
   // create-complaint
 
   const newComplaint = await Complaint.create({
-    user : user._id,
-    laptop,
+    user: user._id,
+    car,
     description,
-    image
-  })
+    image,
+  });
 
-  if(!newComplaint){
-    res.status(400)
-    throw new Error('Complaint Not Registered')
-  }else{
-    res.status(201)
-    res.json(newComplaint)
+  if (!newComplaint) {
+    res.status(400);
+    throw new Error("Complaint Not Registered");
+  } else {
+    res.status(201);
+    res.json(newComplaint);
   }
-  
 });
 
 const getComplaint = asyncHandler(async (req, res) => {
-  
   // Logic to retrieve a complaint by ID
 
   const user = await User.findById(req.user._id);
@@ -77,11 +74,8 @@ const getComplaint = asyncHandler(async (req, res) => {
     res.status(200);
     res.json(complaint);
   }
-
-
 });
 const updateComplaint = asyncHandler(async (req, res) => {
-  
   // Logic to update a complaint by ID
 
   const user = await User.findById(req.user._id);
@@ -91,7 +85,11 @@ const updateComplaint = asyncHandler(async (req, res) => {
     throw new Error("Invalid Request");
   }
 
-  const updatedComplaint = await Complaint.findByIdAndUpdate(req.params.id, req.body, {new : true})
+  const updatedComplaint = await Complaint.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true }
+  );
 
   if (!updatedComplaint) {
     res.status(404);

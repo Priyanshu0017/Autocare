@@ -6,9 +6,9 @@ const complaintSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  laptop: {
+  car: {
     type: String,
-    enum: ["apple", "hp", "lenovo", "asus", "dell", "acer"],
+    enum: ["toyota", "honda", "hyundai", "tata", "mahindra", "bmw"],
     required: true,
   },
   status: {
