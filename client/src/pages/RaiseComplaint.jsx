@@ -33,7 +33,7 @@ const RaiseComplaint = () => {
   return (
     <div className="min-h-screen p-10">
       <BackButton url={"/"} />
-      <h1 className="text-center font-bold text-xl"> Raise New Complaint</h1>
+      <h1 className="text-center font-bold pt-4 text-xl"> Raise New Complaint</h1>
 
       <div className=" p-5 border my-5">
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -85,7 +85,7 @@ const RaiseComplaint = () => {
             className="my-2 border outline-gray-500 border-gray-400 p-2 w-full text-sm"
           />
 
-          <button className="w-full py-2 px-45 my-2 bg-black text-white font-bold hover:bg-green-700 hover:border hover:cursor-pointer duration-200">
+          <button className="w-full py-2  my-2 bg-black text-white font-bold hover:bg-green-700 hover:border hover:cursor-pointer duration-200">
             Raise Complaint
           </button>
         </form>
